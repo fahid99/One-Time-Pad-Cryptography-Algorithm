@@ -7,4 +7,4 @@ There are two functions within this code: encrypt() and decrypt()
 
 This algorithm was created as a way to express my own idea of how to implement the one time pad cipher. Per basic cryptographic safety standards, don't use this to actually encrypt meaningful data... unless you really want to.
 
-# Special shoutout to my pal, Charan R, for helping me with my debugging questions.
+# Special shoutout to my pals, Charan and Varun R, for helping me with my debugging questions.
