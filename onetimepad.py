@@ -27,7 +27,7 @@ def encrypt(cleartext, key):
 			encryptedText = int(cleartextBin[i], 2) ^ int(keyBin[i], 2)
 			print(bin(encryptedText))
 
-	encrypt("Test", "1n3f")
+encrypt("Test", "1n3f")
 
 
 # -------------------------- Decrypt Function --------------------------
