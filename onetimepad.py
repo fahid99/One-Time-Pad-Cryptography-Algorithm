@@ -30,17 +30,17 @@ def encrypt(cleartext, key):
 	# -------------------------- XOR --------------------------
 
 	print("----------This is the encrypted text in binary----------")
-	if len(cleartextBin) == len(keyBin):
+	if len(cleartext) == len(key):
 		for i in range(len(cleartextBin)):
 			ciphertext = int(cleartextBin[i], 2) ^ int(keyBin[i], 2)
-			if len(keyBin) == len(ciphertext):
-				print(bin(ciphertext), end = " ")
-			else:
-				print("Cannot be encrypted")
+		if len(str(keyBin)) == len(str(ciphertext)):
+			print(bin(ciphertext), end = " ")
+		else:
+			print("The text cannot be encrypted since the binary representation of key and ciphertext are not of equal bit length")
 	else:
 		print("The text cannot be encrypted securely since the text and key are not of equal bit length")
 
-encrypt("Test", "Quiz")
+encrypt("cat", "hat")
 
 # -------------------------- Decrypt Function --------------------------
 
