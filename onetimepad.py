@@ -32,9 +32,9 @@ def encrypt(cleartext, key):
 	print("----------This is the encrypted text in binary----------")
 	if len(cleartextBin) == len(keyBin):
 		for i in range(len(cleartextBin)):
-			encryptedText = int(cleartextBin[i], 2) ^ int(keyBin[i], 2)
-			if len(cleartextBin) == len(encryptedText):
-				print(bin(encryptedText), end = " ")
+			ciphertext = int(cleartextBin[i], 2) ^ int(keyBin[i], 2)
+			if len(key) == len(ciphertext):
+				print(bin(ciphertext), end = " ")
 			else:
 				print("Cannot be encrypted")
 	else:
