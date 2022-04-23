@@ -33,7 +33,7 @@ def encrypt(cleartext, key):
 	if len(cleartextBin) == len(keyBin):
 		for i in range(len(cleartextBin)):
 			ciphertext = int(cleartextBin[i], 2) ^ int(keyBin[i], 2)
-			if len(key) == len(ciphertext):
+			if len(keyBin) == len(ciphertext):
 				print(bin(ciphertext), end = " ")
 			else:
 				print("Cannot be encrypted")
