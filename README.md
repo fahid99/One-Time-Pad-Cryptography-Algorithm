@@ -7,7 +7,7 @@ My implementation of the one time pad cipher in Python
 There are two functions within this code: encrypt() and decrypt()
   - encrypt() has two parameters: cleartext and key (of string type). You use the key to encrypt the cleartext. You return the ciphertext.
   - decrypt() has two parameters: ciphertext and key. You use the same key used to encrypt the cleartext to decrypt the ciphertext. You return the cleartext.
-    - When using decrypt(), make sure when passing in the binary representation of the parameter ciphertext to remove the character 'b' so Python doesn't think you're trying to pass in a character literal.
+    - When using decrypt(), make sure to prepend '0b' to the ciphertext and key arguments within the decrypt() parameters so Python knows the arguments are binary values.
 
 # RSA Encryption Algorithm
 There are two functions within this code: encrypt(), decrypt(), and generateKeys().
