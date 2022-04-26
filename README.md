@@ -14,4 +14,5 @@ There are two functions within this code: encrypt(), decrypt(), and generateKeys
 
 These algorithms were created as a way to express my own ideas of how to implement the one time pad cipher and RSA encryption algorithm. Per basic cryptographic safety standards, don't use these files to actually encrypt meaningful data... unless you really want to.
 
-Special shoutout to my pals, Charan R, Varun R, and Micheal B for helping me with my debugging questions.
+
+# Special shoutout to @charanr0121 for helping me with my debugging questions.
