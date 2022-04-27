@@ -1,6 +1,4 @@
 import random
-res = 0
-e = 0
 
 def generateKeys():
     # -------------------- Generate encryption key pair --------------------
@@ -32,17 +30,17 @@ def generateKeys():
         if (e > 1) & (e < phi[i]):
             print(e)
 
-def encrypt(cleartext):
-    cleartextList = list(cleartext)
-    cleartextASCII = []
-    ciphertext = []
+    def encrypt(cleartext):
+        cleartextList = list(cleartext)
+        cleartextASCII = []
+        ciphertext = []
 
-    # converts cleartext to corresponding ASCII values
-    for i in cleartextList:
-        cleartextASCII.append(ord(i))
+        # converts cleartext to corresponding ASCII values
+        for i in cleartextList:
+            cleartextASCII.append(ord(i))
 
-    # creates the ciphertext
-    for i in range(len(cleartextASCII)):
-        ciphertext.append((cleartextASCII[i] ** e) % res)
-    print("This is " + cleartext + " now encrypted as ciphertext: ")
-    print(ciphertext)
+        # creates the ciphertext
+        for i in range(len(cleartextASCII)):
+            ciphertext.append((cleartextASCII[i] ** e) % res)
+        print("The cleartext -- " + cleartext + " -- is now encrypted as ciphertext: ")
+        print(ciphertext)
