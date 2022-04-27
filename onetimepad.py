@@ -1,3 +1,5 @@
+import random
+
 def encrypt(cleartext, key):
 
 	# ------------------------- Changing cleartext into binary values -------------------------
@@ -42,7 +44,7 @@ def encrypt(cleartext, key):
 
 	return ciphertextASCII
 	
-# EXAMPLE: encrypt("Tests", "Fahid")
+encrypt("Tests", "Fahid")
 
 # -------------------------- XOR'ing the ciphertext and private key to decrypt the ciphertext --------------------------
 
@@ -58,4 +60,27 @@ def decrypt(ciphertext, key):
 	print(res)
 
 print("---------- This is the decrypted message ----------")
-# EXAMPLE: decrypt([0b10010, 0b100, 0b11011, 0b11101, 0b10111],[0b1000110, 0b1100001, 0b1101000, 0b1101001, 0b1100100])
+decrypt([0b10010, 0b100, 0b11011, 0b11101, 0b10111],[0b1000110, 0b1100001, 0b1101000, 0b1101001, 0b1100100])
+
+def hashPassword(password):
+	p = random.randint(10000,99999999)
+	q = random.randint(10000,99999999)
+	n = random.randint(1,5)
+
+	for i in range(p):
+		if (i % 2 != 0):
+			p = (i % 2 != 0)
+			return p
+			
+	for i in range(q):
+		if (i % 2 != 0):
+			q = (i % 2 != 0)
+			return p
+
+	res = p * q
+
+	encryptedPassword = encrypt(password, input())
+	hashedPassword = ord(bin(res % len(encryptedPassword)) ^ bin(encryptedPassword) - n)
+	return hashedPassword
+
+hashPassword("hello")
